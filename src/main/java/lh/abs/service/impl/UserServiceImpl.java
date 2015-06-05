@@ -10,10 +10,10 @@ import org.springframework.stereotype.Service;
 
 import lh.abs.model.MUser;
 
-@Service("muserService")
+@Service("userService")
 public class UserServiceImpl implements UserService{
     
-    @Autowired
+    //@Autowired
 	private MUserDao mUserDao;
 		
 	@Override
