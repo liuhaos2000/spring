@@ -22,7 +22,6 @@ public class UserController {
 	
 	@RequestMapping(value="/listUser")
 	public String listUser(HttpServletRequest request) {
-		
 		List <MUser> list = userService.getAll();
 		request.setAttribute("userlist", list);
 		return "listUser";

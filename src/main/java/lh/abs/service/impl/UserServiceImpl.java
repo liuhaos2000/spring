@@ -3,17 +3,16 @@ package lh.abs.service.impl;
 import java.util.List;
 
 import lh.abs.dao.MUserDao;
+import lh.abs.model.MUser;
 import lh.abs.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import lh.abs.model.MUser;
-
-@Service("userService")
+@Service
 public class UserServiceImpl implements UserService{
     
-    //@Autowired
+    @Autowired
 	private MUserDao mUserDao;
 		
 	@Override
