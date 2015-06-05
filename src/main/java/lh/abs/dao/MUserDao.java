@@ -2,7 +2,7 @@ package lh.abs.dao;
 
 import lh.abs.model.MUser;
 
-public interface MUserMapper {
+public interface MUserDao {
     int deleteByPrimaryKey(String userId);
 
     int insert(MUser record);
