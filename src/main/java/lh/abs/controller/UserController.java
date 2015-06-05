@@ -5,25 +5,25 @@ import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 
+import lh.abs.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import rml.model.MUser;
-import rml.service.MUserServiceI;
+import lh.abs.model.MUser;
 
 @Controller
 @RequestMapping("/UserController")
 public class UserController {
     
     @Autowired
-	private MUserServiceI muserService;
-
+	private UserService userService;
 	
 	@RequestMapping(value="/listUser")
 	public String listUser(HttpServletRequest request) {
 		
-		List <MUser> list = muserService.getAll();
+		List <MUser> list = userService.getAll();
 		request.setAttribute("userlist", list);
 		return "listUser";
 	}
@@ -32,22 +32,22 @@ public class UserController {
 	public String addUser(MUser muser) {
 			
 		String id = UUID.randomUUID().toString();
-		muser.setId(id);
-		muserService.insert(muser);
+		muser.setUserId(id);
+		userService.insert(muser);
 		return "redirect:/muserController/listUser.do";
 	}
 	
 	@RequestMapping(value="/deleteUser")
 	public String deleteUser(String id) {
 		
-		muserService.delete(id);
+	    userService.delete(id);
 		return "redirect:/muserController/listUser.do";
 	}
 	
 	@RequestMapping(value="/updateUserUI")
 	public String updateUserUI(String id, HttpServletRequest request) {
 		
-		MUser muser = muserService.selectByPrimaryKey(id);
+		MUser muser = userService.selectByPrimaryKey(id);
 		request.setAttribute("user", muser);
 		return "updateUser";
 	}
@@ -55,7 +55,7 @@ public class UserController {
 	@RequestMapping(value="/updateUser")
 	public String updateUser(MUser muser) {
 		
-		muserService.update(muser);
+	    userService.update(muser);
 		return "redirect:/muserController/listUser.do";
 	}
 }
