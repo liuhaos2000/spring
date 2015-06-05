@@ -2,7 +2,7 @@ package lh.abs.service;
 
 import java.util.List;
 
-import rml.model.MUser;
+import lh.abs.model.MUser;
 
 public interface UserService {
 

@@ -79,4 +79,7 @@
       birthday = #{birthday,jdbcType=DATE}
     where user_id = #{userId,jdbcType=VARCHAR}
   </update>
+  <select id="getAll" resultMap="BaseResultMap">
+    select user_id, user_name, user_password, birthday from muser
+  </select>
 </mapper>
