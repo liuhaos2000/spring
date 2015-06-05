@@ -17,7 +17,6 @@ public class MUserServiceImpl implements MUserServiceI{
 		return muserMapper;
 	}
 
-	@Autowired
 	public void setMuserMapper(MUserMapper muserMapper) {
 		this.muserMapper = muserMapper;
 	}
