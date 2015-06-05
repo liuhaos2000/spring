@@ -9,7 +9,7 @@ public class MUser {
 
     private String userPassword;
 
-    private Date birthday;
+    private String birthday;
 
     public String getUserId() {
         return userId;
@@ -35,11 +35,11 @@ public class MUser {
         this.userPassword = userPassword == null ? null : userPassword.trim();
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 }
