@@ -2,7 +2,7 @@ package lh.abs.service.impl;
 
 import java.util.List;
 
-import lh.abs.dao.MUserDao;
+import lh.abs.dao.MUserMapper;
 import lh.abs.model.MUser;
 import lh.abs.service.UserService;
 
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService{
     
     @Autowired
-	private MUserDao mUserDao;
+	private MUserMapper mUserDao;
 		
 	@Override
 	public List<MUser> getAll() {
