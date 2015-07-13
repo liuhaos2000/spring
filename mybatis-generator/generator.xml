@@ -14,20 +14,20 @@
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
 		<!-- model package and location -->
-		<javaModelGenerator targetPackage="lh.abs.model" targetProject="C:\mybatis">
+		<javaModelGenerator targetPackage="org.buzheng.demo.esm.domain" targetProject="C:\mybatis">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 		<!-- mapping package and location -->
-		<sqlMapGenerator targetPackage="lh.abs.mapping" targetProject="C:\mybatis">
+		<sqlMapGenerator targetPackage="org.buzheng.demo.esm.mapping" targetProject="C:\mybatis">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<!-- dao package and location -->
-		<javaClientGenerator type="XMLMAPPER" targetPackage="lh.abs.dao" targetProject="C:\mybatis">
+		<javaClientGenerator type="XMLMAPPER" targetPackage="org.buzheng.demo.esm.dao" targetProject="C:\mybatis">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 		<!-- table name,  change tableName and domainObjectName  -->
-		<table tableName="m_user" domainObjectName="MUser" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-		
+		<table tableName="sys_type" domainObjectName="SysType" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+		<table tableName="sys_type_sub" domainObjectName="SysTypeSub" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
 	</context>
 </generatorConfiguration>
